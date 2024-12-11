@@ -1,0 +1,149 @@
+:root {
+    --cyan: #7fdbda;
+    --lilac: #c8a2c8;
+    --white: #ffffff;
+    --light-lilac: #e6d7e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--cyan) 0%, var(--lilac) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.title {
+    color: var(--lilac);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--cyan);
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.main-photo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.main-photo img {
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fancy-button {
+    background: linear-gradient(45deg, var(--cyan), var(--lilac));
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+    margin: 1rem auto;
+}
+
+.fancy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.puzzle-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.puzzle-image:hover {
+    transform: scale(1.05);
+}
+
+.poem-container {
+    position: relative;
+    padding: 2rem;
+    background-color: var(--light-lilac);
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.nav-button {
+    background: var(--lilac);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prevPoem {
+    left: 1rem;
+}
+
+#nextPoem {
+    right: 1rem;
+}
+
+#poemContent {
+    text-align: center;
+    padding: 0 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
